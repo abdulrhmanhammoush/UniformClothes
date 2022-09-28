@@ -1,0 +1,207 @@
+*{
+    padding: 0%;
+    font-family: 'Bitter', serif;
+    margin: 0%;
+    box-sizing:border-box;
+}
+/*-----------------  main  ------------------------ */
+
+.main-page{
+    width:calc(100%- 30px);
+    margin: 0 15px;
+    min-height: 7cm;
+    color: #000;
+    display: flex;
+    justify-content: center;
+}
+.main-page img{
+    border-bottom: 5px solid red;
+    width: 74%;
+    height: 8cm;
+}
+
+.main-page-details{
+    width:calc(100%- 30px);
+    margin: 15px;
+    height: auto;
+    color: gray;
+    padding: 0.2cm;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 25px;
+    word-spacing: 2px;
+    border-bottom: 2px red;
+}
+.main-page-details span,span{
+    color: red;
+}
+.main{
+    width: 100%;
+    background: rgb(255, 242, 242);
+    padding-bottom: 0.5cm;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1cm;
+    justify-content: center;
+}
+.box-img{
+    width: 280px;
+    height: 9cm;
+    flex-direction: column;
+    padding:15px 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(227, 227, 227);
+}
+.div-box-img{
+    display: flex;
+    height: 7cm;
+    justify-content: center;
+}
+.div-box-img img{
+    display: block;
+    max-width:250px;
+    max-height:250px;
+    border-radius: 15px;
+    width: auto;
+    height: auto; 
+}
+.img-title{
+    display: flex;
+    border: 1px solid red;
+    height: 1cm;
+    line-height:1cm;
+    border-radius: 15px;
+    justify-content: center;
+    margin-top: 0.2cm;
+}
+
+.box-img:hover{
+    box-shadow: 3px 3px 3px 3px gray;
+    transition: 0.5s;
+    border: none;
+}
+.box-img:hover >.img-title{
+    transition: 0.5s;
+    background: red;
+}
+.box-img:hover >.img-title span{
+    transition: 0.5s;
+    color: white;
+}
+.body-page-title{
+    width: 6.8cm;
+    margin-bottom:1cm ;
+    margin-left:1cm ;
+}
+.body-page-title h1 {
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    font-family: 'Black Ops One', cursive;
+    border-bottom: 3px solid #000000 ;
+    padding-top: .5cm;
+}
+.header .fa{
+    display: none;
+}
+/*-----------------  footer  ------------------------ */
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: rgb(238, 238, 238);
+}
+.icon .fa{
+    color: #f44336;
+    cursor: pointer;
+    margin-bottom: .5cm;    
+    margin-left: .1cm;    
+    width: 50px;
+    line-height: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid red;
+}
+.fa-heart-o{
+    color: #f44336;
+}
+.menu-booton{
+    display: none;
+}
+
+/* ----------------------first---------------- */
+.first{
+    height: 7cm;
+    display: flex;
+    background: rgb(204, 204, 245);
+    flex-direction: column;
+}
+.first-title h1{
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+}
+.categories-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 6cm;
+}
+.categories{
+    width: calc(100% - 140px);
+    height: auto;
+    flex-direction: column;
+}
+.category-img{
+    max-width: 200px;
+    max-height: 4cm;
+    transition-duration: 1s;
+}
+.category-img:hover{
+    box-shadow: 3px 3px 13px royalblue;
+    /* transform: rotate(20deg); */
+    transform: scale3d(1.1);
+}
+
+.previous{
+    margin-left: 15px;  
+    width: 100px;
+    background: rgb(104, 119, 163);
+    padding: 10px 0;
+    text-align: center;
+} 
+.next{
+    float: right;
+    margin-right: 15px;
+    width: 100px;
+    background: rgb(104, 119, 163);
+    padding: 10px 0;
+    text-align: center;
+} 
+.next h3,.previous h3{
+  color: #fff; 
+} 
+
+
+/* @media (max-width:1200px){
+} 
+@media (max-width:992px){
+} */
+@media (max-width:768px){
+    .main-page{
+        width:100%;
+        margin:0px;
+    }
+    .main-page img{
+        width:100%;
+    }
+    .category:first-child{
+        display: block;
+    }
+    .category{
+        display: none;
+        margin: 0 10px;
+    }
+}

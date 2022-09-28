@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-img">
+                <a href="index.html" ><img src="logo.png" alt=""/></a>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="login">
+                <ul>
+                    <li><a href="register.html"><span class="small-hide"><i class="fa fa-sign-in " aria-hidden="true"></i> </span>Login</a></li>
+                    <li><a href="register.html"><span class="small-hide"><i class="fa fa-sign-in " aria-hidden="true"></i> </span>Phone</a></li>
+                </ul> 
+            </div>
+            <div class="menu-botton" id="nav-links">
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                    <li><a href="about.html"><i class="fa fa-info-circle" aria-hidden="true"></i> <span>About</span></a></li>
+                </ul> 
+            </div>
+        </div>
+    </header>
+    <h3 class="responsive-menu" onclick="control_menu()"><b>-MENU-</b></h3>
+    <div class="main-page" onchange = "change()">
+        <img id="main-img" src="images/carousel/banner-2.jpg" alt="" >
+    </div>
+    <div class="main-page-details">
+        <p>
+            <b>
+                <span>  Al-NOUR </span>
+                <i>Uniform Center Provides clothes, restaurants - restaurants - hospitals - schools.   Selling and renting university graduation suits.   Graduation scarfs detail.</i>
+                <h5><i class="fa fa-phone" aria-hidden="true"></i> 221913  <i class="fa fa-mobile" aria-hidden="true"></i> 0933208318</h5>
+            </b>
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+        </p>
+    </div>
+    <div class="footer">
+        <!-- <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a> -->
+        <div class="icon">
+            <a href="tel:221913"><i class="fa fa-phone"></i></a>
+            <a href="tel:0933208318"><i class="fa fa-mobile"></i></a>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i> by Abdulrhman Ha</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var nav_links=document.getElementById("nav-links");
+        var i=0
+        function control_menu(){
+            if(i==0){
+                nav_links.style.display="block";
+                i=1;
+            }
+            else{
+                nav_links.style.display="none";
+                i=0;
+            }
+        }
+
+        var images = ['images/bg.png','images/carousel/banner-1.jpg','images/carousel/banner-2.jpg'];
+        var index = 0;
+
+        function change() {
+        document.getElementById("main-img").src = images[index];
+        if (index == 2) {
+            index = 0;
+        } else {
+            index++;
+        }
+
+        setInterval(change(), 1000);
+        }
+
+        window.onchange = change();
+
+
+        // =---------------------------------
+        function next()
+        {
+            var img1 = document.getElementById("img-1");
+            var img2 = document.getElementById("img-2");
+            var img3 = document.getElementById("img-3");
+            img1.src = photos[x];
+            img2.src = photos[x+1];
+            img3.src = photos[x+2];
+            x++;
+            if(x >= photos.length){
+                x = 0;
+            }
+        } 
+    var photos = [], x = 0;
+    photos[0] = "images/ladies/1.jpg";
+    photos[1] = "images/ladies/2.jpg";
+    photos[2] = "images/ladies/3.jpg";
+    photos[3] = "images/ladies/4.jpg";
+    photos[4] = "images/ladies/5.jpg";
+    photos[5] = "images/ladies/6.jpg";
+    photos[6] = "images/ladies/7.jpg";
+    photos[7] = "images/ladies/8.jpg";
+    photos[8] = "images/ladies/9.jpg";
+
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <div class="logo-img">
+            <a href="index.html" ><img src="logo.png" alt=""/></a>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="login">
+            <ul>
+                <li><a href="tel:221913"><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="tel:221913"><i class="fa-brands fa-facebook-messenger"></i></a></li>
+            </ul> 
+        </div>
+        <div class="menu-botton" id="nav-links">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span> </a></li>
+                <li><a href="about.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
+            </ul> 
+        </div>
+    </div>
+</header>
+<h3 class="responsive-menu" onclick="control_menu()"><b>-MENU-</b></h3>
+<div class="main-page">
+    <img id="main-img" src="images/carousel/banner-2.jpg" alt="" >
+</div>
+<div class="main-page-details">
+    <p>
+        <b>
+            <span>  Al-NOUR </span>
+            <i>Uniform Center Provides clothes, restaurants - restaurants - hospitals - schools.   Selling and renting university graduation suits.   Graduation scarfs detail.</i>
+            <h5><i class="fa fa-phone" aria-hidden="true"></i> 221913  <i class="fa fa-mobile" aria-hidden="true"></i> 0933208318</h5>
+        </b>
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+    </p>
+</div>
+
+
+
+
+        
+<div class="first">
+    <div class="first-title"><h1>Clothes Categories </h1></div>
+    <div class="categories-body">
+        <div class="previous" onclick="previous()">
+            <i class="fa fa-arrow-left"  aria-hidden="true"></i>
+        </div>
+        <div class="categories">
+            <div class="row">
+                <div class="category">
+                    <a href="product.html"><img id="img-1" class="category-img" src="images/ladies/1.jpg" alt=""></a>
+                </div> 
+                <div class="category">
+                    <a href="product.html"><img id="img-2"  class="category-img" src="images/ladies/2.jpg" alt=""></a>
+                </div>
+                <div class="category">
+                    <a href="product.html"><img id="img-3" class="category-img" src="images/ladies/3.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="next" onclick="next()">
+            <i class="fa fa-arrow-right"  aria-hidden="true"></i>
+
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="body-page-title"><h1>LATEST PRODUCTS </h1></div>
+    <div class="row">
+        
+        <div class="box-img">
+            <div class="div-box-img">
+                <a href="index.html"><img src="images/ladies/6.jpg" alt=""></a>
+            </div>
+            <div class="img-title">
+                <div>
+                    <h4>
+                        Worker Clothes - <span>  2200$ </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="box-img">
+            <div class="div-box-img">
+                <a href="product-details.html"><img src="images/ladies/7.jpg" alt=""></a>
+            </div>
+            <div class="img-title">
+                <div>
+                    <h4>
+                        Worker Clothes - <span>  2200$ </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="box-img">
+            <div class="div-box-img">
+                <a href="product-details.html"><img src="images/ladies/8.jpg" alt=""></a>
+            </div>
+            <div class="img-title">
+                <div>
+                    <h4>
+                        Worker Clothes - <span>  2200$ </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="box-img">
+            <div class="div-box-img">
+                <a href="product-details.html"><img src="images/ladies/9.jpg" alt=""></a>
+            </div>
+            <div class="img-title">
+                <div>
+                    <h4>
+                        Worker Clothes - <span>  2200$ </span>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="icon">
+        <a href="tel:221913"><i class="fa fa-phone"></i></a>
+        <a href="tel:0933208318"><i class="fa fa-mobile"></i></a>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by Abdulrhman Ha</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var nav_links=document.getElementById("nav-links");
+    var i=0
+    function control_menu(){
+        if(i==0){
+            nav_links.style.display="block";
+            i=1;
+        }
+        else{
+            nav_links.style.display="none";
+            i=0;
+        }
+    }
+
+    var images = ['images/carousel/banner-1.jpg','images/carousel/banner-2.jpg'];
+    var x = 0;
+
+    setInterval(    
+        function()
+        {
+        var img2 = document.getElementById("main-img");
+        img2.src = images[x];
+        img2.style.opacity="1";
+        x++;
+
+        if(x >= images.length){
+            x = 0;
+        } 
+    }   , 1500);
+
+    // =---------------------------------
+    function next()
+    {
+        if(y<8){
+        var img1 = document.getElementById("img-1");
+        var img2 = document.getElementById("img-2");
+        var img3 = document.getElementById("img-3");
+        img1.src= img2.src;
+        img2.src = img3.src;
+        img3.src = photos[y+3];
+        y++;
+        }
+        if(y>=photos.length -4)
+            y=0;
+    } 
+    function previous()
+    {
+        if(y >= 2){
+        var img1 = document.getElementById("img-1");
+        var img2 = document.getElementById("img-2");
+        var img3 = document.getElementById("img-3");
+        img3.src= img2.src;
+        img2.src = img1.src;
+        img1.src = photos[y-1];
+        y--;
+        }
+        if(y<=3)
+        y=9;
+    } 
+    var y = 0;
+    var photos = ["images/ladies/1.jpg","images/ladies/2.jpg","images/ladies/3.jpg","images/ladies/4.jpg","images/ladies/5.jpg","images/ladies/6.jpg",
+        "images/ladies/7.jpg","images/ladies/8.jpg","images/ladies/9.jpg"]
+</script>  
+</body>
+</html>
